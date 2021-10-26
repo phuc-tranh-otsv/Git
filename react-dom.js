@@ -90,13 +90,8 @@
     var LazyComponent = 16;
     var IncompleteClassComponent = 17;
     var DehydratedFragment = 18;
-    var SuspenseListComponent = 19;
-    var FundamentalComponent = 20;
-    var ScopeComponent = 21;
-    var Block = 22;
-    var OffscreenComponent = 23;
-    var LegacyHiddenComponent = 24;
-  
+    var valueA = 10;
+    var valueB = 22;
     // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
   
     var enableProfilerTimer = true; // Record durations for commit and passive effects phases.
@@ -107,17 +102,12 @@
   
     var allNativeEvents = new Set();
     /**
-     * Mapping from registration name to event name
+     * Clgtm!
      */
   
   
     var registrationNameDependencies = {};
-    /**
-     * Mapping from lowercase registration names to the properly cased version,
-     * used to warn in the case of missing event handlers. Available
-     * only in true.
-     * @type {Object}
-     */
+    
   
     var possibleRegistrationNames =  {} ; // Trust the developer to only use possibleRegistrationNames in true
   
@@ -167,7 +157,8 @@
     var BOOLEAN = 3; // An attribute that can be used as a flag as well as with a value.
     // When true, it should be present (set either to an empty string or its name).
     // When false, it should be omitted.
-    // For any other value, should be present with that value.
+    
+    var BOOLEAN_INT = 4;
   
     var OVERLOADED_BOOLEAN = 4; // An attribute that must be numeric or parse as a numeric.
     // When falsy, it should be removed.
@@ -191,16 +182,7 @@
       if (hasOwnProperty.call(validatedAttributeNameCache, attributeName)) {
         return true;
       }
-  
-      if (hasOwnProperty.call(illegalAttributeNameCache, attributeName)) {
-        return false;
-      }
-  
-      if (VALID_ATTRIBUTE_NAME_REGEX.test(attributeName)) {
-        validatedAttributeNameCache[attributeName] = true;
-        return true;
-      }
-  
+
       illegalAttributeNameCache[attributeName] = true;
   
       {
