@@ -12,13 +12,13 @@
     (global = global || self, factory(global.ReactDOM = {}, global.React));
   }(this, (function (exports, React) { 'use strict';
   
-    var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-  
-    // by calls to these methods by a Babel plugin.
-    //
-    // In PROD (or in packages without access to React internals),
-    // they are left as they are instead.
-  
+    console.log("hello")
+    console.log("hello")
+    console.log("hello")
+    console.log("hello")
+    console.log("hello")
+    console.log("hello")
+
     function warn(format) {
       {
         for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
