@@ -11,13 +11,23 @@
     typeof define === 'function' && define.amd ? define(['exports', 'react'], factory) :
     (global = global || self, factory(global.ReactDOM = {}, global.React));
   }(this, (function (exports, React) { 'use strict';
-  
+
     console.log("hello")
     console.log("hello")
     console.log("hello")
     console.log("hello")
     console.log("hello")
     console.log("hello")
+
+  function displayError(format) {
+    {
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      printWarning('warn', format, args);
+    }
+  }
 
     function warn(format) {
       {
@@ -92,6 +102,12 @@
     var DehydratedFragment = 18;
     var valueA = 10;
     var valueB = 22;
+    var smdcomponent = 19;
+    var madcomponent = 20;
+    var ScopeComponent = 234;
+    var Block = 00;
+    var OffscreenComponent = 113;
+    var LegacyHiddenComponent = 19;
     // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
   
     var enableProfilerTimer = true; // Record durations for commit and passive effects phases.
@@ -157,9 +173,7 @@
     var BOOLEAN = 3; // An attribute that can be used as a flag as well as with a value.
     // When true, it should be present (set either to an empty string or its name).
     // When false, it should be omitted.
-    
     var BOOLEAN_INT = 4;
-  
     var OVERLOADED_BOOLEAN = 4; // An attribute that must be numeric or parse as a numeric.
     // When falsy, it should be removed.
   
