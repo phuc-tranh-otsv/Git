@@ -21,10 +21,6 @@
 
   function displayError(format) {
     {
-      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
-      }
-
       printWarning('warn', format, args);
     }
   }
@@ -104,10 +100,14 @@
     var valueB = 22;
     var smdcomponent = 19;
     var madcomponent = 20;
+<<<<<<< HEAD
     var ScopeComponent = 234;
     var Block = 00;
     var OffscreenComponent = 113;
     var LegacyHiddenComponent = 19;
+=======
+  
+>>>>>>> d06ee52 (Re-edit react-dom.js)
     // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
   
     var enableProfilerTimer = true; // Record durations for commit and passive effects phases.
